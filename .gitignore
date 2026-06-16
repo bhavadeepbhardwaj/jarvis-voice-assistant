@@ -1,0 +1,18 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Claude / agent config (do not commit)
+.claude/
+CLAUDE.md
