@@ -16,3 +16,6 @@ env/
 # Claude / agent config (do not commit)
 .claude/
 CLAUDE.md
+
+# pytest
+.pytest_cache/

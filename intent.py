@@ -20,18 +20,18 @@ def extract_query(text: str) -> str:
 def normalize(text: str) -> str:
     text = text.lower().strip()
 
+    # Whole-word replacements only. Substring replacement caused cascades
+    # (e.g. "resume" -> "resumee", "downloads" -> "downloadss").
     replacements = {
         "resum": "resume",
         "downlods": "downloads",
         "download": "downloads",
         "organised": "organize",
-        "organise": "organize"
+        "organise": "organize",
     }
 
-    for k, v in replacements.items():
-        text = text.replace(k, v)
-
-    return text
+    words = [replacements.get(w, w) for w in text.split()]
+    return " ".join(words)
 
 
 def parse_intent(text: str) -> Dict:

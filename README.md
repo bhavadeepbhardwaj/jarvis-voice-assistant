@@ -128,6 +128,17 @@ reference it here._
 
 ---
 
+## Testing
+
+Unit tests cover intent parsing, action routing, and the response helpers — all
+pure logic, so they need no microphone, server, or audio dependencies:
+
+```bash
+pytest -q
+```
+
+---
+
 ## Future improvements
 
 - AI fallback for unknown commands (the `USE_AI_FALLBACK` flag is already wired
